@@ -1,0 +1,40 @@
+  <div class="create-modal">
+    <kendo-dialog title="Add Trade Code" (close)="close('cancel')">
+      <form [formGroup]="SORTradeForm" >
+        <div class="form-preview">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                  <label class="sr-only" for="SORTrade">Trade<span>*</span></label>
+                  <div class="input-group">
+                      <kendo-dropdownlist [data]="SORTrade" formControlName="SORTrade"></kendo-dropdownlist>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="sr-only" for="MainTrade">Main Trade<span>*</span></label>
+                    <div class="input-group">
+                        <input type="checkbox" id="MainTrade" formControlName="MainTrade">
+                    </div>
+                </div>
+            </div>
+            </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                  <label class="sr-only" for="TradeSMV">SMV <span>*</span></label>
+                  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input id="TradeSMV" class="form-control" formControlName="TradeSMV" placeholder="TradeSMV" required>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <kendo-dialog-actions>
+          <button kendoButton primary="true">Create</button>
+          <button kendoButton primary="true">Update</button>
+        </kendo-dialog-actions>
+      </form>
+    </kendo-dialog>
+  </div>
